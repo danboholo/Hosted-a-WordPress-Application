@@ -7,6 +7,14 @@ This repository contains the README file for my WordPress website hosted on AWS 
 
 Welcome to my AWS WordPress project repository! This project demonstrates how I successfully hosted a WordPress application using an AWS EC2 instance. Below, I'll walk you through the detailed steps I took to set up and configure the necessary components: Apache2, PHP, and MySQL.
 
+Great, let's add these final steps to the README file to complete the project documentation. Here is the updated README file with all the steps included:
+
+---
+
+# AWS WordPress Application Setup on EC2
+
+Welcome to my AWS WordPress project repository! This project demonstrates how I successfully hosted a WordPress application using an AWS EC2 instance. Below, I'll walk you through the detailed steps I took to set up and configure the necessary components: Apache2, PHP, and MySQL.
+
 ## Prerequisites
 
 Before we dive into the setup, make sure you have the following:
@@ -79,6 +87,68 @@ GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'localhost';
 FLUSH PRIVILEGES;
 exit
 ```
+
+## Step 5: Restart Apache Service
+
+After creating the WordPress database, I restarted the Apache service to ensure all changes took effect.
+
+```bash
+sudo systemctl restart apache2
+```
+
+## Step 6: Set Up WordPress
+
+Next, I navigated to the HTML directory and removed the default `index.html` file.
+
+```bash
+cd /var/www/html/
+sudo rm -f index.html
+```
+
+Then, I downloaded the latest version of WordPress.
+
+```bash
+sudo wget https://wordpress.org/latest.zip
+sudo unzip latest.zip
+sudo rm -rf latest.zip
+```
+
+I moved the WordPress files to the HTML directory.
+
+```bash
+cd wordpress/
+sudo cp -rvf * /var/www/html/
+cd ..
+sudo rm -rf wordpress/
+```
+
+## Step 7: Configure WordPress
+
+I opened a web browser, entered the public IPv4 address of my EC2 instance, and followed the WordPress setup instructions. I entered the database name (`wordpress`), the database username, and password, then clicked submit. WordPress provided a configuration script (`wp-config.php`), which I copied.
+
+Back in the EC2 instance, I edited the `wp-config.php` file to include the configuration details.
+
+```bash
+sudo nano /var/www/html/wp-config.php
+```
+
+I pasted the content and saved the file.
+
+## Step 8: Complete WordPress Installation
+
+Returning to the WordPress setup page, I ran the installation. I entered the site title, admin username, and password, then logged in to the WordPress dashboard.
+
+## Final Result
+
+Here are some screenshots of the final WordPress setup:
+
+**WordPress Dashboard:**
+
+![WordPress Dashboard](images/Hosted a wordpress App in AWS using EC2.png)
+
+**WordPress Site:**
+
+![WordPress Site](images/the hosed of wordpress app.png)
 
 ## Conclusion
 
