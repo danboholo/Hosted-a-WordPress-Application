@@ -4,7 +4,7 @@ This repository contains the README file for my WordPress website hosted on AWS 
 ---
 
 
-# AWS WordPress Application Setup on EC2
+# AWS WordPress Website Setup on EC2
 
 Welcome to my AWS WordPress project repository! This project demonstrates how I successfully hosted a WordPress application using an AWS EC2 instance. Below, I'll walk you through the detailed steps I took to set up and configure the necessary components: Apache2, PHP, and MySQL.
 
