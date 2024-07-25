@@ -150,5 +150,6 @@ By following these steps, I successfully set up Apache2, PHP, and MySQL on my AW
 This project demonstrates my ability to manage server infrastructure and deploy web applications on cloud platforms, showcasing both my technical skills and my attention to detail.
 
 !! Success Screenshots
+
 IMG_6946.jpg
 ---
