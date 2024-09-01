@@ -152,4 +152,7 @@ This project demonstrates my ability to manage server infrastructure and deploy 
 !! Success Screenshots
 
 ![IMG_6946](https://github.com/user-attachments/assets/eac12739-7165-4f07-9431-589df50b0818)
+
+![IMG_8208](https://github.com/user-attachments/assets/2b6ab9a2-89b8-414c-9301-028c60375b69)
+
 ---
